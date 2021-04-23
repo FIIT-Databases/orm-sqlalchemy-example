@@ -27,9 +27,5 @@ export POSTGRES_CONNECTION="postgresql://postgres@localhost:5432/orm_example"
 flask example
 ```
 
-## Databáza
-
-![](docs/eer.png)
-
 ---
 S ❤️ FIIT STU
