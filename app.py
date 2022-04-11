@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-    "POSTGRES_CONNECTION", "postgresql://postgres@localhost:5432/orm_example_flask"
+    "POSTGRES_CONNECTION", "postgresql://postgres@localhost:5432/dbs_orm_sqlalchemy"
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -183,7 +183,6 @@ def example():
     result = Member.query.filter(
         (Member.born_at >= date(1960, 1, 1)) & (Member.born_at <= date(1969, 12, 31))
     ).all()
-
 
 
 app.cli.add_command(example)

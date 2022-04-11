@@ -1,4 +1,4 @@
-# Django ORM example
+# SQLAlchemy ORM example
 
 Tento repozitá prezentuje fungovanie ORM architektonického vzoru na príklade SQLAlchemy ORM.
 
@@ -21,7 +21,7 @@ source venv/bin/activate
 poetry install
 
 # Vytvorenie konfiguracie
-export POSTGRES_CONNECTION="postgresql://postgres@localhost:5432/orm_example"
+export POSTGRES_CONNECTION="postgresql://postgres@localhost:5432/dbs_orm_sqlalchemy"
 
 # Spustenie príkladov
 flask example
