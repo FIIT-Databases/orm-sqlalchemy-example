@@ -1,31 +1,32 @@
-# SQLAlchemy ORM example
+# SQLAlchemy ORM Example
 
-Tento repozitá prezentuje fungovanie ORM architektonického vzoru na príklade SQLAlchemy ORM.
+This repository demonstrates the use of SQLAlchemy ORM, which use the
+[data mapper](https://martinfowler.com/eaaCatalog/dataMapper.html) pattern as architectural design.
 
-Príklad je postavený na dátovom modeli podľa repozitára
-[fiit-orm-django-example](https://github.com/Sibyx/fiit-orm-django-example).
+The example is based on the data model according to the repository
+[orm-django-example](https://github.com/FIIT-Databases/orm-django-example).
 
-Príklady sa nachádzajú v súbore `app.py`.
+You can find examples in the `app.py` file.
 
-Projekt používa [poetry](https://python-poetry.org/) ako balíčkovací systém. Prihlasovacie údaje sa čítajú z env
-premennej POSTGRES_CONNECTION. Kompletná inštalácia ne Linuxe, môže vyzerať napríklad takto:
+The project utilizes [poetry](https://python-poetry.org/) for package management. It retrieves database credential
+s from the environment variable `POSTGRES_CONNECTION`. Here is an example of how to set up the project on Linux:
 
 ```shell
-# Stiahnutie projekty
-git clone https://github.com/Sibyx/fiit-orm-sqlalchemy-example.git orm_example
+# Clone the repository
+git clone git@github.com:FIIT-Databases/orm-sqlalchemy-example.git orm_example
 cd orm_example
 
-# Vytvorenie virtuálneho prostredia a instalacia zavislosti
+# Set up Python virtual environment and install dependencies
 python -m venv venv
 source venv/bin/activate
 poetry install
 
-# Vytvorenie konfiguracie
-export POSTGRES_CONNECTION="postgresql://postgres@localhost:5432/dbs_orm_sqlalchemy"
+# Set the POSTGRES_CONNECTION environment variable with your database credentials
+export POSTGRES_CONNECTION="postgresql+psycopg://postgres@localhost:5432/dbs_orm_sqlalchemy"
 
-# Spustenie príkladov
+# Run the example
 flask example
 ```
 
 ---
-S ❤️ FIIT STU
+With ❤️ FIIT STU

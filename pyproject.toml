@@ -1,19 +1,20 @@
 [tool.poetry]
 name = "ormexampleflask"
-version = "0.1.0"
+version = "2024.1"
 description = ""
 authors = ["Jakub Dubec <jakub.dubec@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-Flask = "^2.1.1"
-Flask-SQLAlchemy = "^2.5.1"
-psycopg2 = "^2.9.3"
-Flask-Migrate = "^3.1.0"
-click = "^8.1.2"
+python = "^3.12"
+Flask = "^3.0"
+Flask-SQLAlchemy = "^3.0"
+psycopg = {version = "^3.1", extras = ["c"]}
+Flask-Migrate = "^4.0"
+click = "^8.1"
+python-dotenv = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

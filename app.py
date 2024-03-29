@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-    "POSTGRES_CONNECTION", "postgresql://postgres@localhost:5432/dbs_orm_sqlalchemy"
+    "POSTGRES_CONNECTION", os.getenv('POSTGRES_CONNECTION')
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
